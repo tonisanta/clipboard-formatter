@@ -54,10 +54,7 @@ func formatJson(jsonBytes []byte) (bytes.Buffer, error) {
 		return out, fmt.Errorf("is not JSON")
 	}
 	err := json.Indent(&out, jsonBytes, "", identTwoSpaces)
-	if err != nil {
-		return out, err
-	}
-	return out, nil
+	return out, err
 }
 
 func processXml(data []byte, ch <-chan []byte, wg *sync.WaitGroup) {
