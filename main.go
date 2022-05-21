@@ -24,9 +24,9 @@ func main() {
 	fmt.Println("Listening ...")
 
 	ch := clipboard.Watch(context.Background(), clipboard.FmtText)
+	var wg sync.WaitGroup // number of working goroutines
 	for data := range ch {
 		log.Println("new data to process")
-		var wg sync.WaitGroup // number of working goroutines
 		wg.Add(2)
 		start := time.Now()
 		go processJson(data, ch, &wg)
