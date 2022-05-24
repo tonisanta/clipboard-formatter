@@ -9,9 +9,7 @@ For the following input:
 ```json
 {"order_num" : "O2012019231a", "order_date" : "2012-06-27", "order_id" : 21934, "order_item" : [{"product_id" : 20933, "quantity" : 3, "price" : 36000, "product_name" : "Thingamagic 2000", "unit_price" : 12000}, {"product_id" : 10366, "quantity" : 1, "price" : 100, "product_name" : "Super Duper Blooper", "unit_price" : 100}]}
 ```
-You will get the formatted response in the clipboard and the following output
-in the terminal:
-![Json example](example-json.png)
+You will get the formatted response in the clipboard:
 ```json
 {
   "order_num" : "O2012019231a",

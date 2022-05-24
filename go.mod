@@ -3,6 +3,7 @@ module clipboard-formatter
 go 1.18
 
 require (
+	github.com/clbanning/mxj/v2 v2.5.5
 	github.com/go-xmlfmt/xmlfmt v0.0.0-20220206211657-0a94163c4677
 	golang.design/x/clipboard v0.6.2
 )
