@@ -72,10 +72,11 @@ func formatXml(data []byte) (string, error) {
 	if !isValidXml(data) {
 		return "", fmt.Errorf("is not XML")
 	}
-	formattedXml := xmlfmt.FormatXML(string(data), "", identTwoSpaces)
+	formattedXml := xmlfmt.FormatXML(string(data), "", identTwoSpaces, true)
 	return formattedXml, nil
 }
 
 func isValidXml(data []byte) bool {
-	return xml.Unmarshal(data, new(interface{})) == nil
+	// is not necessary to unmarshal it, however it's the easiest way to check if it's valid
+	return xml.Unmarshal(data, new(any)) == nil
 }
